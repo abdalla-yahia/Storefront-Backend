@@ -1,8 +1,6 @@
 {
-    "semi": true,
-    "bracketSameLine": false,
-    "endOfLine": "auto",
-    "bracketSpacing": true,
-    "singleQuote": true
-    
+  "singleQuote": true,
+  "printWidth": 80,
+  "bracketSpacing": true,
+  "semi": true
 }
