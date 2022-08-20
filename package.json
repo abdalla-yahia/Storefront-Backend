@@ -1,0 +1,33 @@
+{
+  "name": "storefront-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon /dist/index.js",
+    "build": "tsc --build",
+    "format":"prettier --write src/**/*.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abdalla-yahia/Storefront-Backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abdalla-yahia/Storefront-Backend/issues"
+  },
+  "homepage": "https://github.com/abdalla-yahia/Storefront-Backend#readme",
+  "devDependencies": {
+    "@types/eslint": "^8.4.6",
+    "@types/prettier": "^2.7.0",
+    "@typescript-eslint/eslint-plugin": "^5.33.1",
+    "@typescript-eslint/parser": "^5.33.1",
+    "eslint": "^8.22.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.7.1",
+    "prettier-eslint": "^15.0.1"
+  }
+}
