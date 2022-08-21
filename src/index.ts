@@ -1,15 +1,16 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import express, { Application, Request, Response, NextFunction } from 'express';
 import morgan from 'morgan';
-import dotenv from 'dotenv';
-import { Pool } from 'pg';
 import helmet from 'helmet';
 import ratelimt from 'express-rate-limit';
+import errorMidlware from './middleware/error.middlware';
+import config from './configration';
+import db from './database/index'
+import { Client } from 'pg';
 
 const app: Application = express();
-const port = process.env.PORT || 4000;
+const port = config.Port || 4500;
 
-dotenv.config();
 
 app.listen(port, () => {
   console.log(`server running at port ${port}....!!`);
@@ -28,6 +29,8 @@ app.use(
     message: 'Sory comeback after One Houre',
   })
 );
+app.use(errorMidlware);
+
 app.get('/', (req: Request, res: Response) => {
   console.log(req.url);
   res.send('this is root ..');
@@ -36,3 +39,13 @@ app.get('/', (req: Request, res: Response) => {
 app.use((_req: Request, res: Response) => {
   res.status(404).send('Oops..!!  Page Not Found');
 });
+
+db.connect().then(Client => {
+  return Client.query('SELECT NOW()').then(res => {
+    Client.release()
+    console.log(res.rows);
+  }).catch(err => {
+    Client.release();
+    console.log(err);
+  })
+})

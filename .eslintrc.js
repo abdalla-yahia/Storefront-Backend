@@ -17,7 +17,13 @@ module.exports = {
   },
   plugins: ['@typescript-eslint', 'prettier'],
   rules: {
-    'prettier/prettier': 1,
+    'prettier/prettier': [
+      0,
+      {
+        singleQuote: true,
+        parser: 'flow',
+      },
+    ],
     indent: 0,
     'linebreak-style': 0,
     quotes: 0,
