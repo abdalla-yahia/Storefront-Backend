@@ -22,5 +22,6 @@ module.exports = {
     'linebreak-style': 0,
     quotes: 0,
     semi: 0,
+    '@typescript-eslint/no-var-requires': 0,
   },
 };
