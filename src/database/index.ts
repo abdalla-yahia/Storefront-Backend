@@ -1,6 +1,7 @@
 import { Pool } from 'pg';
 import config  from '../configration';
 
+
 const pool = new Pool({
     host: config.Host,
     database: config.Database,
@@ -12,7 +13,6 @@ const pool = new Pool({
 pool.on('error', (error:Error) => {
     console.log(error.message);
 })
-
 
 
 export default pool;
