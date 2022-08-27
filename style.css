@@ -1,0 +1,50 @@
+.active{
+    border: 1px solid slateblue;
+    outline: none;
+    width: 150px;
+    margin: 5px;
+    height: 50px;
+    text-align: center;
+    color: red;
+    font-size: 15px;
+}
+h1{
+   color: rgb(234, 0, 255);
+    margin-left: 30%;
+    margin-bottom: 80px;
+    margin-top: 50px;
+}
+.hide{
+    visibility: hidden;
+}
+button{
+    width: 150px;
+    height: 70px;
+    font-size: 15px;
+    color: blue;
+    background-color: aquamarine;
+    border: none;
+    cursor: pointer;
+}
+input[type='checkbox']{
+   width: 30px;
+   height: 30px;
+   right: 25%;
+   top: 30%;
+}
+label{
+    color: red;
+    font-size: 30px;
+}
+.color{
+    background-color: red;
+}
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+form > div{
+    margin-bottom: 50px;
+}

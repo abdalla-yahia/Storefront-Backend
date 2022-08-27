@@ -2,18 +2,18 @@
     "defaultEnv":{"ENV":"Main_Env"},
     "dev":{
         "driver":"pg",
-        "host":{"ENV":"Host"},
-        "user":{"ENV":"User_Name"},
-        "database":{"ENV":"Database"},
-        "password":{"ENV":"Password"},
-        "port":{"ENV":"Db_Port"}
+        "host":{"ENV":"Main_host"},
+        "user":{"ENV":"Main_name"},
+        "port":{"ENV":"Main_port"},
+        "database":{"ENV":"Main_database"},
+        "password":{"ENV":"Main_password"}
     },
     "test":{
         "driver":"pg",
-        "host":{"ENV":"Host"},
-        "user":{"ENV":"User_Name"},
-        "database":{"ENV":"Database_Test"},
-        "password":{"ENV":"Password"},
-        "port":{"ENV":"Db_Port"}
+        "host":{"ENV":"Main_host"},
+        "user":{"ENV":"Main_name"},
+        "port":{"ENV":"Main_port"},
+        "database":{"ENV":"Main_database_test"},
+        "password":{"ENV":"Main_password"}
     }
 }
